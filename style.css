@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+html,
+body,
+h1,
+p {
+  margin: 0;
+}
+
+
+button {
+	border:none;
+	outline:none;
+	cursor: pointer;
+}
+
+
+button:focus {
+	border-color: #666;
+}
+
+input, button, select, textarea {
+	font-family: inherit;
+	padding: 0.4em;
+	box-sizing: border-box;
+	border-radius: 2px;
+  
+}
+
+
+ul{
+	list-style: none;
+ }
+
+
+
+html:focus-within{
+	scroll-behavior: smooth;
+}
+
+body {
+	text-rendering: optimizeSpeed;
+
+}
+
+img,
+picture,
+svg{
+display: block;
+
+}
+
+:root{
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-200: hsl(230deg 75% 98%);
+    --clr-neutral-400: hsla(223, 23%, 55%, 1);
+    --clr-neutral-800: hsl(223, 47%, 23%);
+    
+    --clr-primary-200: hsl(225, 100%, 94%);
+    --clr-primary-400: hsla(245, 83%, 68%, 1);
+    --clr-primary-500: hsl(245, 75%, 52%);
+
+
+    --fs-700: 1.75rem;
+    --fs-400: 1rem;
+    --fs-300: 0.875rem;
+
+    --fw-400:500;
+    --fw-700:700;
+    --fw-900:900;
+
+    --ff-primary: "Red Hat Display", sans-serif;
+}
+
+body{
+  font-size: var(--fs-400);
+  font-weight: var(--fw-400);
+  font-family: var(--ff-primary);
+  color: var(--clr-neutral-400);
+ display: grid;
+ place-items: center;
+ gap: 1rem;
+  width: 100%;
+  background-color: var(--clr-primary-200);
+  line-height: 1.6;
+  padding: 1.4rem;
+  background-image: url("images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100vh;
+}
+
+h1,h2,h3
+{
+  line-height: 1.1;
+}
+
+
+h2{
+  color: var(--clr-neutral-800);
+  font-weight: var(--fw-900);
+  font-size: var(--fs-700);
+}
+
+/* compostion */
+.grid-flow
+{
+ display: grid;
+ gap:1em;
+}
+
+.flex-row{
+  display: flex;
+  gap: 1rem;
+}
+
+/* utility */
+.text-align-center{
+  text-align: center;
+}
+
+.padding-48{
+  padding: 3rem;
+}
+
+.padding-24{
+  padding: 1.5rem;
+}
+
+.text-neutral-800{
+  color: var(--clr-neutral-800);
+}
+
+.text-neutral-400{
+  color: var(--clr-neutral-400);
+}
+
+.bg-neutral-100{
+  background-color: var(--clr-neutral-100);
+}
+
+.bg-neutral-200{
+  background-color: var(--clr-neutral-200);
+}
+
+.fw-bold{
+  font-weight: var(--fw-700);
+}
+
+.fw-extra-bold{
+  font-weight: var(--fw-900);
+}
+
+.br-1{
+  border-radius: .5rem;
+}
+
+.br-2{
+  border-radius: 1.5rem;
+}
+
+.br-upper{
+  border-radius: 1em 1em 0 0;
+}
+
+.margin-left-auto{
+  margin-left: auto;
+}
+
+a,
+.link
+{
+  background: transparent;
+  text-decoration: underline;
+  color: var(--clr-primary-500);
+  font-weight: var(--fw-700);
+  cursor: pointer;
+}
+
+a:hover,a:focus,.link:hover, .link:focus{
+  color: var(--clr-primary-400);
+  text-decoration: none;
+  
+}
+
+.button{
+padding: 1em 2em;
+border-radius: .5rem;
+font-weight: var(--fw-700);
+background-color: transparent;
+}
+
+.button[data-type="primary"]
+{
+  background-color: var(--clr-primary-500);
+  color: var(--clr-neutral-100);
+  box-shadow: 0px 15px 15px hsl(245deg 75% 52% / 25%);
+}
+.button[data-type="primary"]:hover,
+.button[data-type="primary"]:focus
+{
+  background-color: var(--clr-primary-400);
+}
+
+.button[data-type="secondary"]
+{
+  color:var(--clr-neutral-400); 
+  padding: 0;
+}
+.button[data-type="secondary"]:hover,
+.button[data-type="secondary"]:focus
+{
+  color:var(--clr-neutral-800); 
+ 
+}
+
+
+.card{
+  max-width: 450px;
+  box-shadow: 0px 7px 19px 0px hsl(245deg 75% 52% / 25%);
+  
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+@media (max-width:675px) {
+body{
+  background-image: url("images/pattern-background-mobile.svg");
+  background-size: contain;
+
+
+}
+}
+
+
